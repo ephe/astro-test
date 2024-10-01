@@ -1,5 +1,18 @@
 ---
+const pageTitle ="About";
 
+const identity = {
+	screenName: "Saph",
+	country: "America",
+	occupation: "Product Designer",
+	hobbies: ["gaming", "writing", "casualcore raiding"],
+};
+
+const skills = ["HTML", "CSS", "Markdown", "An unused English Lit degree", "Controller healing"];
+
+const mood = "happy";
+const finished = false;
+const goal = 3;
 ---
 
 <html lang="en">
@@ -8,13 +21,26 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>About</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<h1>About</h1>
+		<p><a href="/">Go Home</a></p>
+		<h1>{pageTitle}</h1>
 		<p>I guess this is the new generating hotness or something. Anyway guess I'm back on my bullshit (though this implies I ever left).
 			Next step is to get some styles all up ins 'cause yikes, y'all :V</p>
         <p>On a more serious note, one day this might manifest as a website again.</p>
-        <p><a href="/">Go back</a></p>
+		<p>Who I am</p>
+		<ul>
+			<li>Of all the names I've used, {identity.screenName} is probably the one I'm best known by.</li>
+			<li>I'm currently based in {identity.country} and am currently employed as a {identity.occupation}.
+			<li>In my free time, I do a lot of casualcore {identity.hobbies[0]}, and some {identity.hobbies[1]} on the side.</li>
+		</ul>
+		<p>Skills I have:</p>
+		<ul>
+			{skills.map((skill)=> <li>{skill}</li>)}
+		</ul>
+		{mood==="happy" && <p>How exciting it is to learn something new!</p>}
+		{finished && <p>And now I've finished the tutorial.</p>}
+		{goal === 3 ? <p>The goal is to finish in three weeks. (look, I'm trying to be optimistic here.)</p> : "I'll be happy to finish at all."}
 	</body>
 </html>
