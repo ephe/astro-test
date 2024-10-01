@@ -13,6 +13,8 @@ const skills = ["HTML", "CSS", "Markdown", "An unused English Lit degree", "Cont
 const mood = "happy";
 const finished = false;
 const goal = 3;
+
+import '../styles/global.css';
 ---
 
 <html lang="en">
@@ -37,7 +39,7 @@ const goal = 3;
 		</ul>
 		<p>Skills I have:</p>
 		<ul>
-			{skills.map((skill)=> <li>{skill}</li>)}
+			{skills.map((skill)=> <li class="skill">{skill}</li>)}
 		</ul>
 		{mood==="happy" && <p>How exciting it is to learn something new!</p>}
 		{finished && <p>And now I've finished the tutorial.</p>}

@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    margin: 2rem;
+    background-color: #1b1927;
+    color: #d3cdc5;
+}
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #a357dd;
+    font-size: 3rem;
+}
+li.skill {
+    color: #4D79EB;
+}
+a {
+    color:#4D79EB;
+}
+a:visited {
+    color:#a357dd;
+}
